@@ -5,7 +5,7 @@ import MapView from "../components/MapView";
 export default function Home() {
   return (
     <div>
-      <section class="hero has-background-info">
+      <section class="hero has-background-info is-align-items-center">
         <div class="hero-body">
           <p class="title">Spokes People</p>
         </div>
@@ -16,10 +16,10 @@ export default function Home() {
         <input class="input is-info column is-one-fifth" type="text" placeholder="Info input"></input>
       </section>
       <div class="container">
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-info">
+        <div class="title is-parent">
+          <article class="title is-child notification is-info">
             <div class="content">
-              <p class="title">Search Map</p>
+              <p class="title ">Search Map</p>
               <p class="subtitle">Add map</p>
               <div class="content"> <MapView /></div>
             </div>
