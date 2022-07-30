@@ -11,7 +11,7 @@ export default function Profile() {
         </div>
       </section>
       <section className="section is-medium has-background-info-light">
-        <h2 className="subtitle">Profile Page</h2>
+        <h2 className="title">Favorites</h2>
         <div className="content has-addons is-centered">
           
         </div>
