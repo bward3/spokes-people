@@ -1,6 +1,6 @@
 import React from "react";
 import "bulma/css/bulma.min.css";
-import MapView from "../components/MapView"
+// import MapView from "../components/MapView"
 
 export default function Profile() {
   return (
@@ -13,7 +13,7 @@ export default function Profile() {
       <section className="section is-medium has-background-info-light">
         <h2 className="subtitle">Profile Page</h2>
         <div className="content has-addons is-centered">
-          < MapView />
+          
         </div>
 
       </section>
