@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "bulma/css/bulma.min.css";
-import Signup from "../pages/Signup"
+
 import { useMutation } from "@apollo/client";
-import { LOGIN_USER } from "../utils/mutations";
+import { ADD_USER } from "../utils/mutations";
+
 import Auth from "../utils/auth";
 
-const Login = (props) => {
-  const [formState, setFormState] = useState({ email: "", password: "" });
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+const Signup = () => {
+  const [formState, setFormState] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
-  // update state based on form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -20,46 +23,52 @@ const Login = (props) => {
     });
   };
 
-  // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
+
     try {
-      const { data } = await login({
+      const { data } = await addUser({
         variables: { ...formState },
       });
 
-      Auth.login(data.login.token);
+      Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
 
-    // clear form values
     setFormState({
+      username: "",
       email: "",
       password: "",
     });
+
   };
+
+
 
   return (
     <div className="">
-      <section class="hero has-background-info">
-        <div class="hero-body">
-          <p class="title">Spokes People</p>
-          <p class="subtitle">Login or Sign Up</p>
-        </div>
-      </section>
-      <div className="level-left">
-        <h4 className="title">Login</h4>
+      <div className="level-right">
+        <h4 className="title">Sign Up</h4>
         <div className="">
           {data ? (
-            <p>Success! You may now head {" "}
-            <Link to="/Profile">to your profile page.</Link>
+            <p>
+              Success! You may now head{" "}
+              <Link to="/">back to the homepage.</Link>
             </p>
           ) : (
             <form onSubmit={handleFormSubmit}>
               <input
-                className="input is-info"
+                className="input is-info column is-three-quarters"
+                placeholder="Your username"
+                name="username"
+                type="text"
+                value={formState.name}
+                onChange={handleChange}
+              />
+              <input
+                className="input is-info column is-three-quarters"
                 placeholder="Your email"
                 name="email"
                 type="email"
@@ -67,7 +76,7 @@ const Login = (props) => {
                 onChange={handleChange}
               />
               <input
-                className="input is-info"
+                className="input is-info column is-three-quarters"
                 placeholder="******"
                 name="password"
                 type="password"
@@ -86,13 +95,13 @@ const Login = (props) => {
             </form>
           )}
 
-          {error && <div className="">{error.message}</div>}
+          {error && (
+            <div className="">{error.message}</div>
+          )}
         </div>
-      </div>
-      <div className="content">
-            <Signup />
       </div>
     </div>
   );
 };
-export default Login;
+
+export default Signup;
