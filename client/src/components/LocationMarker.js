@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 function LocationMarker() {
     const [position, setPosition] = useState(null)
     const map = useMapEvents({
-      preclick() {
+      dblclick() {
         map.locate()
       },
       locationfound(e) {
