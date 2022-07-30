@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from "react";
-
+import MapView from "./MapView";
 import "bulma/css/bulma.min.css";
-import MapView from "../components/MapView";
+// import MapView from "../components/MapView";
 
 export default function Home() {
   const [positions, setPositions] = useState([]);
@@ -19,29 +19,29 @@ export default function Home() {
   
   return (
     <div>
-      <section class="hero has-background-info is-align-items-center">
-        <div class="hero-body">
-          <p class="title">Spokes People</p>
+      <section className="hero has-background-info is-align-items-center">
+        <div className="hero-body">
+          <p className="title">Spokes People</p>
         </div>
       </section>
-      <section class="section is-medium has-background-info-light">
-        <h2 class="subtitle">Search Input</h2>
-        <input class="input is-info column is-one-fifth" type="text" placeholder="Info input"></input>
-        <input class="input is-info column is-one-fifth" type="text" placeholder="Info input"></input>
+      <section className="section is-medium has-background-info-light">
+        <h2 className="subtitle">Search Input</h2>
+        <input className="input is-info column is-one-fifth" type="text" placeholder="Info input"></input>
+        <input className="input is-info column is-one-fifth" type="text" placeholder="Info input"></input>
       </section>
-      <div class="container">
-        <div class="title is-parent">
-          <article class="title is-child notification is-info">
-            <div class="content">
-              <p class="title ">Search Map</p>
-              <p class="subtitle">Add map</p>
+      <div className="container">
+        <div className="title is-parent">
+          <article className="title is-child notification is-info">
+            <div className="content">
+              <p className="title ">Search Map</p>
+              <p className="subtitle">Add map</p>
               <div class="content"> <MapView positions={positions} /></div>
             </div>
           </article>
         </div>
       </div>
-      <footer class="footer has-background-info">
-        <div class="content has-text-centered">
+      <footer className="footer has-background-info">
+        <div className="content has-text-centered">
           <p>
             CSS by
             <strong> Bulma</strong> site by{" "}
