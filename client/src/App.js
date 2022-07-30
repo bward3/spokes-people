@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import NavTabs from './NavTabs';
 
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });

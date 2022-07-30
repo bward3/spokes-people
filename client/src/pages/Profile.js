@@ -1,19 +1,24 @@
 import React from "react";
 import "bulma/css/bulma.min.css";
+import MapView from "../components/MapView"
 
 export default function Profile() {
   return (
     <div>
-      <section class="hero has-background-info">
-        <div class="hero-body">
-          <p class="title">Spokes People</p>
+      <section className="hero has-background-info">
+        <div className="hero-body">
+          <p className="title">Spokes People</p>
         </div>
       </section>
-      <section class="section is-medium has-background-info-light">
-        <h2 class="subtitle">Profile Page</h2>
+      <section className="section is-medium has-background-info-light">
+        <h2 className="subtitle">Profile Page</h2>
+        <div className="content has-addons is-centered">
+          < MapView />
+        </div>
+
       </section>
-      <footer class="footer has-background-info">
-        <div class="content has-text-centered">
+      <footer className="footer has-background-info">
+        <div className="content has-text-centered">
           <p>
             CSS by
             <strong> Bulma</strong> site by{" "}
