@@ -43,10 +43,10 @@ const Login = (props) => {
 
   return (
     <div className="">
-      <section class="hero has-background-info">
-        <div class="hero-body">
-          <p class="title">Spokes People</p>
-          <p class="subtitle">Login or Sign Up</p>
+      <section className="hero has-background-info">
+        <div className="hero-body">
+          <p className="title">Spokes People</p>
+          <p className="subtitle">Login or Sign Up</p>
         </div>
       </section>
       <div className="level-left">
