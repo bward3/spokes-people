@@ -16,7 +16,15 @@ const MapView = ({ positions }) => {
             position={[position.location.latitude, position.location.longitude]}
             // icon={icon}
           >
-            <Popup>{position.name}</Popup>
+            <Popup>{position.name}<br />
+            {position.location.city}<br />
+            {position.location.latitude}<br />
+            {position.location.longitude}
+
+
+
+
+            </Popup>
           </Marker>
         ))}{" "}
       </MapContainer>
