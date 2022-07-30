@@ -1,8 +1,22 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
+
 import "bulma/css/bulma.min.css";
 import MapView from "../components/MapView";
 
 export default function Home() {
+  const [positions, setPositions] = useState([]);
+
+  useEffect(() => {
+    names()
+  }, [])
+  
+  const names = async () => {
+    const responce = await fetch('http://api.citybik.es/v2/networks/?rapidapi-key=f17db1dcddmsh3dce12092ca5ebep17ef72jsn4fcd0fdb0eeb')
+  const json = await responce.json();
+  console.log(json);
+    setPositions(json?.networks)
+  }
+  
   return (
     <div>
       <section class="hero has-background-info is-align-items-center">
@@ -21,7 +35,7 @@ export default function Home() {
             <div class="content">
               <p class="title ">Search Map</p>
               <p class="subtitle">Add map</p>
-              <div class="content"> <MapView /></div>
+              <div class="content"> <MapView positions={positions} /></div>
             </div>
           </article>
         </div>
