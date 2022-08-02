@@ -44,8 +44,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="">
-      <div className="level-right">
+    <div className="container">
+      <div className="">
         <h4 className="title">Sign Up</h4>
         <div className="">
           {data ? (
