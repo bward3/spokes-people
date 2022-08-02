@@ -1,8 +1,8 @@
-## SPOKES PEOPLE
+# SPOKES PEOPLE
 
 ## DESCRIPTION
 
-To build a mapping website for a worldwide cycling station spots where the city, location, and exact longitude and latitude are deployed as a search engine.   People can search for bike stations and other related data.  The exact points/markers on a map were recreated using REACT leaflet. Users can login to their profile and save their favorite or frequently used bike station. We gathered data using a fetch API called city bikes, using the company's Rapid API. The live map feature shows real-time bikes rented from these stations with features pinging and number of bikes taken or returned.  We used REACT, JavaScript and graphQL to build these maps and authentication in our code with JavaScript. The application is mobile responsive - usable out-in-the-field. This was a collaborative project using pair programming and working together on the features and components in REACT. Uses a GitHub repository.
+To build a mapping website for a worldwide cycling station spots where the city, location, and exact longitude and latitude are deployed in a search engine.   For this project, we used an API developed with Python and here we are using JavaScript and REACT.  People can search for bike stations and other related data.  The exact points/markers on a map were recreated using REACT leaflet. Users can login to their profile and save their favorite or frequently used bike station. We gathered data using a fetch API called city bikes, using the company's Rapid API. The live map feature shows real-time bikes rented from these stations with features of number of bikes taken or returned.  We show real-time number of empty bikes at these stations so that people can guage how many bikes are at the stations.  We used REACT, JavaScript and graphQL to build these maps and authentication in our code with JavaScript. The application is mobile responsive - usable out-in-the-field. This was a collaborative project using pair programming and working together on the features and components in REACT. Uses a GitHub repository.
 
 ## PROJECT 3  - TEAM
 
@@ -15,13 +15,13 @@ To build a mapping website for a worldwide cycling station spots where the city,
 
 ## TABLE OF CONTENTS
 
-  - [Deployed To ](#deployed-to)
+  - [Deployed To ](#deployed-application)
   - [Installation](#installation)
   - [Mapping Resources](#mapping-resources)
   - [Usage](#usage)
-  - [Contribution](#contribution)
+  - [Contributing](#contributing)
   - [License](#license)
-  - [Contact](#contact-ua)
+  - [Contact](#contact-us)
 
 
 ## DEPLOYED APPLICATION
@@ -37,7 +37,7 @@ To build a mapping website for a worldwide cycling station spots where the city,
   JWT - Authentification, API - Sensitive Key, PWA, Service-worker, VSCODE - Prettier, BULMA open source CSS framework, Component-level CSS, HEROKU.
 
 
-## SCRIPTS:
+### SCRIPTS:
 
 ### MAIN:
 
@@ -175,7 +175,7 @@ To build a mapping website for a worldwide cycling station spots where the city,
 A BUILT APP TO LOCATE BIKE STATIONS THROUGOUT THE WORLD
 
 
-## CONTRIBUTION
+## CONTRIBUTING
 
 Open to any and all contributions!
 
@@ -185,7 +185,6 @@ Open to any and all contributions!
 This application is covered under the ISC open source license.
 
 ![License](https://img.shields.io/badge/license-ISC-brightgreen)
-
 
 
 ## CONTACT US
