@@ -36,10 +36,10 @@ export default function Profile() {
       <section className="hero has-background-info">
         <div className="hero-body">
           <p className="title">Spokes People</p>
+          <h2 className="title">Hello {`${user.username}` }</h2>
         </div>
       </section>
       <section className="section is-medium has-background-info-light">
-        <h2 className="title">Hello {`${user.username}` }</h2>
         <div className="content has-addons is-centered">
         </div>
         <div class="content">
