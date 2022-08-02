@@ -2,9 +2,10 @@ const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Favorites {
-    favoritesId: ID
-    lat: Int
-    long: Int
+    _id: ID
+    name: String
+    lat: Float
+    long: Float
   }
   type User {
     _id: ID
@@ -25,6 +26,8 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addFavorite( name: String!, lat: Float!, long: Float!): Favorites
+    
   }
 `;
 

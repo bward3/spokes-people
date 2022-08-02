@@ -6,9 +6,9 @@ import "bulma/css/bulma.min.css";
 export default function Home() {
   const [positions, setPositions] = useState([]);
 
-  useEffect(() => {
-    names()
-  }, [])
+  // useEffect(() => {
+  //   names()
+  // }, [])
   
   const names = async () => {
     const responce = await fetch('http://api.citybik.es/v2/networks/?rapidapi-key=f17db1dcddmsh3dce12092ca5ebep17ef72jsn4fcd0fdb0eeb')
