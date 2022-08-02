@@ -7,25 +7,11 @@ export const QUERY_USER = gql`
     username
     email
     favorites {
-      favoritesId
+      _id
+      name
       lat
       long
     }
   }
 }
-`;
-
-
-export const QUERY_ME = gql`
-  query me {
-    me {
-      _id
-      username
-      email
-      favorites {
-        _id
-        createdAt
-      }
-    }
-  }
 `;

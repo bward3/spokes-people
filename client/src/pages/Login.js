@@ -49,7 +49,7 @@ const Login = (props) => {
           <p className="subtitle">Login or Sign Up</p>
         </div>
       </section>
-      <div className="level-left">
+      <div className="container">
         <h4 className="title">Login</h4>
         <div className="">
           {data ? (
@@ -59,7 +59,7 @@ const Login = (props) => {
           ) : (
             <form onSubmit={handleFormSubmit}>
               <input
-                className="input is-info"
+                className="input is-info column is-three-quarters"
                 placeholder="Your email"
                 name="email"
                 type="email"
@@ -67,7 +67,7 @@ const Login = (props) => {
                 onChange={handleChange}
               />
               <input
-                className="input is-info"
+                className="input is-info column is-three-quarters"
                 placeholder="******"
                 name="password"
                 type="password"

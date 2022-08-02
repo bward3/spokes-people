@@ -33,7 +33,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <NavTabs />
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
+        <div className="flex-column justify-center align-center min-100-vh bg-primary ">
           <Routes>
             <Route 
               path="/" 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 
@@ -42,14 +41,11 @@ const Signup = () => {
       email: "",
       password: "",
     });
-
   };
 
-
-
   return (
-    <div className="">
-      <div className="level-right">
+    <div className="container">
+      <div className="">
         <h4 className="title">Sign Up</h4>
         <div className="">
           {data ? (
@@ -95,9 +91,7 @@ const Signup = () => {
             </form>
           )}
 
-          {error && (
-            <div className="">{error.message}</div>
-          )}
+          {error && <div className="">{error.message}</div>}
         </div>
       </div>
     </div>
