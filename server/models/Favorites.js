@@ -6,16 +6,15 @@ const favoritesSchema = new Schema(
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
+    name: {
+      type: String,
     },
     lat: {
       type: Number,
     },
     long: {
       type: Number,
-    }
+    },
   },
 
   {
