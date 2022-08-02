@@ -2,15 +2,15 @@ import React from "react";
 
 const FavoritesList = ({ favorites }) => {
   if (!favorites.length) {
-    return <h3>Choose a favorite terminal</h3>;
+    return <h3 className="title">Choose a favorite terminal</h3>;
   }
 
   return (
-    <div>
+    <div className="is-inline-flex">
       {favorites &&
         favorites.map((favorite) => (
-          <div className="tile is-ancestor">
-          <div key={favorite._id} className="tile is-4  is-parent">
+          <div className="tile is-ancestor px-3 py-3">
+          <div key={favorite._id} className="tile is-parent">
             <article className="tile is-child box notification is-info">
             <p className="title" key={`${favorite._id}-name`}>
               {favorite.name}

@@ -2,7 +2,6 @@ import React from "react";
 import "bulma/css/bulma.min.css";
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
-import Auth from '../utils/auth';
 import FavoritesList from "../components/FavoritesList";
 
 
@@ -13,9 +12,6 @@ export default function Profile() {
 
   const user = data?.me || data?.user || {};
   
-  // if (Auth.loggedIn()) {
-  //   return <Navigate to="/profile" />;
-  // }
 
   if (loading) {
     return <div>Loading...</div>;
@@ -23,7 +19,7 @@ export default function Profile() {
 
   if (!user?.username) {
     return (
-      <h4>
+      <h4 className="title">
         You must be logged in to see your profile.
       </h4>
     );
@@ -36,7 +32,7 @@ export default function Profile() {
       <section className="hero has-background-info">
         <div className="hero-body">
           <p className="title">Spokes People</p>
-          <h2 className="title">Hello {`${user.username}` }</h2>
+          <h2 className="title">Hello, {`${user.username}` }</h2>
         </div>
       </section>
       <section className="section is-medium has-background-info-light">
