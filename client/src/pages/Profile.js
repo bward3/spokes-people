@@ -4,7 +4,6 @@ import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 import FavoritesList from "../components/FavoritesList";
 
-
 export default function Profile() {
   
 

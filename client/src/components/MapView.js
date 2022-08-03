@@ -1,6 +1,7 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, } from "react-leaflet";
 import LocationMarker from "./LocationMarker";
 import "./index.css";
+
 
 const MapView = ({ positions }) => {
   return (
@@ -13,18 +14,21 @@ const MapView = ({ positions }) => {
         {positions.map((position) => (
           <Marker
             position={[position.location.latitude, position.location.longitude]}
-            // icon={icon}
+            // icon={Icon} 
           >
-            <Popup>{position.name}<br />
-            {position.location.city}<br />
-            {position.location.latitude}<br />
-            {position.location.longitude}
-
-
-
-
+           
+            <Popup>
+              
+              {position.name}
+              <br />
+              {position.location.city}
+              <br />
+              {position.location.latitude}
+              <br />
+              {position.location.longitude}
             </Popup>
           </Marker>
+          
         ))}{" "}
       </MapContainer>
     </>
