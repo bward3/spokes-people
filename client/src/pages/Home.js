@@ -1,68 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 // import MapView from "./MapView";
 import "bulma/css/bulma.min.css";
 import MapView from "../components/MapView";
 
 export default function Home() {
-  const [positions, setPositions] = useState([]);
-
-  useEffect(() => {
-    var api = "http://api.citybik.es/v2/networks/";
-    fetch(api)
-      .then((response) => {
-        return response.json();
-      })
-      .then(function (response) {
-        var networks = response.networks;
-        var usNetworks = networks.filter(
-          (network) => network.location.country === "US"
-        );
-        // console.log(usNetworks);
-        var newApi = "http://api.citybik.es";
-        let tempPositions = [];
-        for (var i = 0; i < usNetworks.length; i++) {
-          const href = usNetworks[i].href;
-          // const city = usNetworks[i].location.city;
-          // const lat = usNetworks[i].location.latitude;
-          // const lon = usNetworks[i].location.longitude;
-          // console.log(`The city is ${city} lat is ${lat} lon is ${lon}`);
-          fetch(newApi + href)
-            .then((data) => {
-              return data.json();
-            })
-            .then(function (data) {
-              var station = data.network.stations;
-              // console.log(station);
-              for (var j = 0; j < station.length; j++) {
-                var name = station[j].name;
-                // var emptySlots = station[j].empty_slots;
-                // var availableBikes = station[j].free_bikes;
-                var latitude = station[j].latitude;
-                var longitude = station[j].longitude;
-                // console.log(name,latitude,longitude);
-
-                let position = {
-                  name,
-                  location: {
-                    latitude,
-                    longitude,
-                  }
-                }
-
-                tempPositions.push(position);
-                // console.log(`${availableBikes} bikes at ${name}`);
-                // console.log(`${emptySlots} slots available at ${name}`);
-              }
-            });
-        }
-        let tpSlice = tempPositions.slice(0,100);
-        console.log(tpSlice);
-        return tpSlice;
-      }).then((tp) => {
-        setPositions(tp);
-        console.log(positions);
-      });
-  }, []);
+  // const [positions, setPositions] = useState([]);
+  // useEffect(() => {
+  //   fetch('http://api.citybik.es/v2/networks/')
+  //   .then(res => res.json())
+  //   .then(function (response) {
+  //     var networks = response.networks;
+  //     var usNetworks = networks.filter((network) => network.location.country === 'US');
+  //     var api = "http://api.citybik.es";
+  //     let tempPositions = [];
+  //     for (var i = 0; i < usNetworks.length; i++) {
+  //       const href = usNetworks[i].href;
+  //       fetch(api + href)
+  //         .then(data => data.json())
+  //         .then(function (data) {
+  //           var station = data.network.stations;
+  //           for (var j = 0; j < station.length; j++) {
+  //             var name = station[j].name;
+  //             var lat = station[j].latitude;
+  //             var lon = station[j].longitude;
+  //             var emptySlots = station[j].empty_slots;
+  //             var availableBikes = station[j].free_bikes;
+  //             let bikes = {
+  //               name, 
+  //               location: { lat, lon },
+  //               emptySlots,
+  //               availableBikes
+  //             };
+  //             tempPositions.push(bikes);
+  //           }
+  //         })
+  //     } console.log(tempPositions);
+  //   })
+  //   })
+  // }
 
   return (
     <div>
@@ -84,7 +59,7 @@ export default function Home() {
               ></input>
               <div class="content">
                 {" "}
-                <MapView positions={positions} />
+                <MapView />
               </div>
             </div>
           </article>
@@ -108,4 +83,4 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+  }
