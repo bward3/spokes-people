@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import MapView from "./MapView";
 import "bulma/css/bulma.min.css";
 // import MapView from "../components/MapView";
@@ -21,7 +21,7 @@ export default function Home() {
     <div>
       <section className="hero has-background-info is-align-items-center">
         <div className="hero-body">
-          <p className="title">Spokes People</p>
+          <p className="title has-text-light">Spokes People</p>
         </div>
       </section>
      
@@ -37,11 +37,11 @@ export default function Home() {
         </div>
       </div>
       <footer className="footer has-background-info">
-        <div className="content has-text-centered">
+        <div className="content has-text-centered has-text-light">
           <p>
             CSS by
-            <strong> Bulma</strong> site by{" "}
-            <a href="https://github.com/bward3/spokes-people"> Group 4</a>. July
+            <strong className="has-text-light"> Bulma</strong> site by{" "}
+            <a className="has-text-primary" href="https://github.com/bward3/spokes-people"> Group 4-Project 3</a>. July
             2022.
           </p>
         </div>
