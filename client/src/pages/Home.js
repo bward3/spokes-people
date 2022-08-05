@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import MapView from "./MapView";
+import MapView from "../components/MapView";
 import "bulma/css/bulma.min.css";
 
 
@@ -9,6 +9,11 @@ export default function Home() {
   useEffect(() => {
     getData()
   }, [])
+  
+  useEffect(() => {
+    const iframe = document.querySelector("iframe");
+    iframe?.remove();
+  }, [positions]);
   
   function createUUID() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -70,7 +75,7 @@ export default function Home() {
             <div className="content">
               <p className="title ">City Search</p>
               <input className="input is-info column is-one-fifth" type="text" placeholder="City"></input>
-              <div class="content"> <MapView positions={positions} /></div>
+              <div className="content"> <MapView positions={positions} /></div>
             </div>
           </article>
         </div>
