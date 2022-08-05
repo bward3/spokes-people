@@ -13,7 +13,7 @@ const resolvers = {
   },
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
-      console.log(username)
+      console.log(username);
       const user = await User.create({ username, email, password });
       const token = signToken(user);
       return { token, user };
@@ -35,15 +35,14 @@ const resolvers = {
 
       return { token, user };
     },
-    addFavorite: async (parent, { name, lat, long }, context) => {
+    addFavorite: async (parent, { name, lat, lon }, context) => {
       if (context.user) {
-
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { favorites:{ name, lat, long} } },
+          { $addToSet: { favorites: { name, lat, lon } } }
         );
 
-        return {_id: null, name, lat, long};
+        return { _id: null, name, lat, lon };
       }
       throw new AuthenticationError("You need to be logged in!");
     },

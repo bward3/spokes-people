@@ -37,7 +37,7 @@ export default function Profile() {
       <section className="section is-medium has-background-info-light">
         <div className="content has-addons is-centered">
         </div>
-        <div class="content">
+        <div className="content">
           < FavoritesList favorites={user.favorites}/>
         </div>
       </section>
