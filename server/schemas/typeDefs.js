@@ -5,7 +5,7 @@ const typeDefs = gql`
     _id: ID
     name: String
     lat: Float
-    long: Float
+    lon: Float
   }
   type User {
     _id: ID
@@ -26,7 +26,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addFavorite( name: String!, lat: Float!, long: Float!): Favorites
+    addFavorite( name: String!, lat: Float!, lon: Float!): Favorites
     
   }
 `;

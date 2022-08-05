@@ -7,7 +7,7 @@ To build a mapping website for a worldwide cycling station spots where the city,
 ## PROJECT 3  - TEAM
 
 - Norman Herrera
-- Shane Williams
+- Shane Wilmes
 - Brian Ward
 - Andrew Young
 - Ellen Furness
@@ -172,7 +172,7 @@ To build a mapping website for a worldwide cycling station spots where the city,
 
 ## USAGE
 
-A BUILT APP TO LOCATE BIKE STATIONS THROUGOUT THE WORLD
+A BUILT APP TO LOCATE BIKE STATIONS THROUGHOUT THE WORLD
 
 
 ## CONTRIBUTING

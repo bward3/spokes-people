@@ -30,7 +30,7 @@ export default function Home() {
     .then(function (response) {
       var networks = response.networks; 
       var usNetworks = networks.filter((network) => network.location.country === 'US'); // filters of US networks
-      var splice = usNetworks.slice(0, 1)
+      var splice = usNetworks.slice(0, 4)
       var api = "http://api.citybik.es";
       for (var i = 0; i < splice.length; i++) {
         const href = splice[i].href; // gets individual hrefs
@@ -60,7 +60,7 @@ export default function Home() {
       setPositions(bikes);
   } 
 )}
-  
+
   return (
     <div>
       <section className="hero has-background-info is-align-items-center">
@@ -73,8 +73,7 @@ export default function Home() {
         <div className="title is-parent">
           <article className="title is-child notification is-info-light">
             <div className="content">
-              <p className="title ">City Search</p>
-              <input className="input is-info column is-one-fifth" type="text" placeholder="City"></input>
+              <p className="title ">Find bikes near you!</p>
               <div className="content"> <MapView positions={positions} /></div>
             </div>
           </article>

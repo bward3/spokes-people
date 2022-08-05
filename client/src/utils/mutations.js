@@ -8,11 +8,11 @@ export const ADD_USER = gql`
         _id
         username
         email
-        favorites {
+        favorite {
           _id
           name
           lat
-          long
+          lon
         }
       }
     }
@@ -20,33 +20,43 @@ export const ADD_USER = gql`
 `;
 
 export const UPDATE_USER = gql`
-mutation updateUser($id: ID!, $username: String!, $password: String!, $email: String!) {
-  updateUser(username: $username, password: $password, email: $email) {
-    token
-    user {
-    _id
-    username
-    email
+  mutation updateUser(
+    $id: ID!
+    $username: String!
+    $password: String!
+    $email: String!
+  ) {
+    updateUser(username: $username, password: $password, email: $email) {
+      token
+      user {
+        _id
+        username
+        email
+      }
     }
   }
-}
 `;
 
 export const REMOVE_USER = gql`
-  mutation deleteUser($id: ID!, $username: String!, $password: String!, $email: String!) {
+  mutation deleteUser(
+    $id: ID!
+    $username: String!
+    $password: String!
+    $email: String!
+  ) {
     deleteUser(id: ID, username: String, password: String, email: String) {
       token
-        user {
-          _id
-          username
-          email
-            favorites {
-              favoritesId
-              name
-              lat
-              long
-            }
+      user {
+        _id
+        username
+        email
+        favorites {
+          favoritesId
+          name
+          lat
+          lon
         }
+      }
     }
   }
 `;
@@ -65,14 +75,12 @@ export const LOGIN_USER = gql`
 `;
 
 export const CREATE_FAVORITE = gql`
-  mutation addFavorite($name: String!, $lat: Int!, $long: Int!) {
-    addFavorite(name: $name, lat: $lat, long: $long) {
-      favorites {
-        _id
-        name
-        lat
-        long
-      }
+  mutation addFavorite($name: String!, $lat: Float!, $lon: Float!) {
+    addFavorite(name: $name, lat: $lat, lon: $lon) {
+      _id
+      name
+      lat
+      lon
     }
   }
 `;

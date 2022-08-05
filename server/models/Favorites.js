@@ -2,7 +2,7 @@ const { Schema, Types } = require("mongoose");
 
 const favoritesSchema = new Schema(
   {
-    favoritesId: {
+    _id: {
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
     },
@@ -12,7 +12,7 @@ const favoritesSchema = new Schema(
     lat: {
       type: Number,
     },
-    long: {
+    lon: {
       type: Number,
     },
   },

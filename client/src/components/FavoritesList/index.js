@@ -18,8 +18,8 @@ const FavoritesList = ({ favorites }) => {
             <p className="subtitle" key={`${favorite._id}-lat`}>
               {favorite.lat}
             </p>
-            <p className="subtitle" key={`${favorite._id}-long`}>
-              {favorite.long}
+            <p className="subtitle" key={`${favorite._id}-lon`}>
+              {favorite.lon}
             </p>
             <figure class="image is-4by3">
             <img src="https://bulma.io/images/placeholders/640x480.png" alt="Shop Pic"></img>

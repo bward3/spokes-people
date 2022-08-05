@@ -10,7 +10,7 @@ export const QUERY_USER = gql`
       _id
       name
       lat
-      long
+      lon
     }
   }
 }
