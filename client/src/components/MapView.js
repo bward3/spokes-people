@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, } from "react-leaflet";
 // import LocationMarker from "./LocationMarker";
 import "./index.css";
 const  MapView = ({ positions }) => {
@@ -12,11 +12,14 @@ const  MapView = ({ positions }) => {
         {positions.map((position) => (
           <Marker
             position={[position.location.lat, position.location.lon]}
-            // icon={Icon}
+            
             key={position.uuid}
           >
-            {console.log(position.location.lat, position.location.lon)}
-            <Popup>{position.name}</Popup>
+            {console.log(position.name, position.location.lat, position.location.lon)}
+            {/* <Popup>{position.name}</Popup> */}
+            <Popup>{`${position.name} ${position.availableBikes}`}</Popup>
+            
+           
           </Marker>
         ))}
       </MapContainer>

@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     getData()
   }, [])
-  
+
   useEffect(() => {
     const iframe = document.querySelector("iframe");
     iframe?.remove();
@@ -18,7 +18,7 @@ export default function Home() {
   function createUUID() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
       var r = (Math.random() * 16) | 0,
-        v = c == 'x' ? r : (r & 0x3) | 0x8;
+        v = c === 'x' ? r : (r & 0x3) | 0x8;
       return v.toString(16);
     });
   }
@@ -30,7 +30,7 @@ export default function Home() {
     .then(function (response) {
       var networks = response.networks; 
       var usNetworks = networks.filter((network) => network.location.country === 'US'); // filters of US networks
-      var splice = usNetworks.slice(0, 5)
+      var splice = usNetworks.slice(0, 1)
       var api = "http://api.citybik.es";
       for (var i = 0; i < splice.length; i++) {
         const href = splice[i].href; // gets individual hrefs
