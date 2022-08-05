@@ -45,8 +45,8 @@ const Login = (props) => {
     <div className="">
       <section className="hero has-background-info">
         <div className="hero-body">
-          <p className="title">Spokes People</p>
-          <p className="subtitle">Login or Sign Up</p>
+          <p className="title has-text-light">Spokes People</p>
+          <p className="subtitle has-text-light">Login or Sign Up</p>
         </div>
       </section>
       <div className="container">
@@ -59,7 +59,7 @@ const Login = (props) => {
           ) : (
             <form onSubmit={handleFormSubmit}>
               <input
-                className="input is-info column is-three-quarters"
+                className="input is-info column is-one-fifth"
                 placeholder="Your email"
                 name="email"
                 type="email"
@@ -67,7 +67,7 @@ const Login = (props) => {
                 onChange={handleChange}
               />
               <input
-                className="input is-info column is-three-quarters"
+                className="input is-info column is-one-fifth"
                 placeholder="******"
                 name="password"
                 type="password"
