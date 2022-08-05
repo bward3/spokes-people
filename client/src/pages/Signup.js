@@ -56,7 +56,7 @@ const Signup = () => {
           ) : (
             <form onSubmit={handleFormSubmit}>
               <input
-                className="input is-info column is-three-quarters"
+                className="input is-info column is-one-fifth"
                 placeholder="Your username"
                 name="username"
                 type="text"
@@ -64,7 +64,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
               <input
-                className="input is-info column is-three-quarters"
+                className="input is-info column is-one-fifth"
                 placeholder="Your email"
                 name="email"
                 type="email"
@@ -72,7 +72,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
               <input
-                className="input is-info column is-three-quarters"
+                className="input is-info column is-one-fifth"
                 placeholder="******"
                 name="password"
                 type="password"
