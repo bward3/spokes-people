@@ -57,7 +57,7 @@ export default function Home() {
                 type="text"
                 placeholder="City"
               ></input>
-              <div class="content">
+              <div className="content">
                 {" "}
                 <MapView />
               </div>
