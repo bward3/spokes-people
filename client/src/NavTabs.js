@@ -5,15 +5,15 @@ import Auth from "./utils/auth";
 // We assign them to their own variable names
 function NavTabs({ currentPage}) {
   return (
-    <div className="tabs is-medium is-centered">
-      <ul>
+    <div className="tabs is-medium is-centered is-toggle is-toggle-rounded">
+      <ul >
         <li>
           <a
             href="/"
             
             // This is a conditional (ternary) operator that checks to see if the current page is "Home"
             // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-            className={
+            className={ 
               currentPage === "Home" ? "nav-link active" : "nav-link"
             }
           >
@@ -46,13 +46,14 @@ function NavTabs({ currentPage}) {
           </a>
         </li>
         <li onClick={() => {Auth.logout()}}>
-          <p
+          <a
+            href="/logout"
             className={
               currentPage === "Logout" ? "nav-link active" : "nav-link"
             }
           >
             Logout
-          </p>
+          </a>
         </li>
       </ul>
     </div>

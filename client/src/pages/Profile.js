@@ -30,8 +30,8 @@ export default function Profile() {
     <div>
       <section className="hero has-background-info">
         <div className="hero-body">
-          <p className="title">Spokes People</p>
-          <h2 className="title">Hello, {`${user.username}` }</h2>
+          <p className="title has-text-light">Spokes People</p>
+          <h2 className="title has-text-light">Hello, {`${user.username}` }</h2>
         </div>
       </section>
       <section className="section is-medium has-background-info-light">
@@ -42,11 +42,11 @@ export default function Profile() {
         </div>
       </section>
       <footer className="footer has-background-info">
-        <div className="content has-text-centered">
+        <div className="content has-text-centered has-text-light">
           <p>
             CSS by
-            <strong> Bulma</strong> site by{" "}
-            <a href="https://github.com/bward3/spokes-people"> Group 4</a>. July
+            <strong className="has-text-light"> Bulma</strong> site by{" "}
+            <a className="has-text-primary"  href="https://github.com/bward3/spokes-people"> Group 4</a>. July
             2022.
           </p>
         </div>

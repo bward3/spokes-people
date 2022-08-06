@@ -74,7 +74,7 @@ export default function Home() {
           <article className="title is-child notification is-info-light">
             <div className="content">
               <p className="title ">Find bikes near you!</p>
-              <div className="content"> <MapView positions={positions} /></div>
+              <div className="container"> <MapView positions={positions} /></div>
             </div>
           </article>
         </div>
