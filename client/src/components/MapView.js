@@ -61,6 +61,7 @@ const MapView = ({ positions }) => {
                 data-lon={position.location.lon}
                 data-name={position.name}
                 onClick={handleFavorite}
+                className="button is-info"
               >
                 Add to favorites
               </button>
