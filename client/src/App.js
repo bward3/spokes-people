@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import NavTabs from './NavTabs';
+import Logout from './utils/auth';
 
 
 

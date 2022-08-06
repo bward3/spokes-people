@@ -38,6 +38,7 @@ const MapView = ({ positions }) => {
       center={[37.78387, -99.044231]}
       zoom={5}
       scrollWheelZoom={true}
+      className="container is-centered"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
